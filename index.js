@@ -49,7 +49,6 @@ const removeHandlers = () => {
 const removeHandlersBtnElem = document.querySelector('.remove-handlers-btn');
 removeHandlersBtnElem.addEventListener('click', removeHandlers);
 
+const clearHandlers = () => {};
 const clearHandlersElem = document.querySelector('.clear-btn');
-clearHandlersElem.addEventListener('click', function (event) {
-  event.stopPropagation();
-});
+clearHandlersElem.addEventListener('click', clearHandlers);
