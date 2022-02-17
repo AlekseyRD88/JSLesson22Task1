@@ -48,3 +48,8 @@ const removeHandlers = () => {
 
 const removeHandlersBtnElem = document.querySelector('.remove-handlers-btn');
 removeHandlersBtnElem.addEventListener('click', removeHandlers);
+
+const clearHandlersElem = document.querySelector('.clear-btn');
+clearHandlersElem.addEventListener('click', function (event) {
+  event.preventDefault();
+});
