@@ -50,15 +50,31 @@ const removeHandlersBtnElem = document.querySelector('.remove-handlers-btn');
 removeHandlersBtnElem.addEventListener('click', removeHandlers);
 
 const clearHandlers = () => {
-  divElem.removeEventListener('click', logGreyDiv, true);
-  divElem.removeEventListener('click', logGreenDiv);
+  divElem.removeEventListener('click', (event) => {
+   logGreyDiv();
+   event.stopPropagation();
+  });
+  divElem.removeEventListener('click', (event) => {
+   logGreenDiv();
+   event.stopPropagation();
+  });
 
-  pElem.removeEventListener('click', logGreyP, true);
-  pElem.removeEventListener('click', logGreenP);
-
-  spanElem.removeEventListener('click', logGreySpan, true);
-  spanElem.removeEventListener('click', logGreenSpan);
-};
+  pElem.removeEventListener('click', (event) => {
+   logGreyP();
+   event.stopPropagation();
+  });
+  pElem.removeEventListener('click', (event) => {
+   logGreenP();
+   event.stopPropagation();
+  });
+  spanElem.removeEventListener('click', (event) => {
+    logGreySpan();
+    event.stopPropagation();
+  });
+  spanElem.removeEventListener('click', (event) => {
+   logGreenSpan();
+   event.stopPropagation();
+});
 
 const clearHandlersBtnElem = document.querySelector('.clear-btn');
 clearHandlersBtnElem.addEventListener('click', clearHandlers);
