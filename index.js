@@ -24,11 +24,11 @@ pElem.addEventListener('click', logGreenP);
 spanElem.addEventListener('click', logGreySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
 
-divElem.removeEventListener('click', logGreyDiv, true);
-divElem.removeEventListener('click', logGreenDiv);
+//divElem.removeEventListener('click', logGreyDiv, true);
+// divElem.removeEventListener('click', logGreenDiv);
 
-pElem.removeEventListener('click', logGreyP, true);
-pElem.removeEventListener('click', logGreenP);
+// pElem.removeEventListener('click', logGreyP, true);
+// pElem.removeEventListener('click', logGreenP);
 
-spanElem.removeEventListener('click', logGreySpan, true);
-spanElem.removeEventListener('click', logGreenSpan);
+// spanElem.removeEventListener('click', logGreySpan, true);
+// spanElem.removeEventListener('click', logGreenSpan);
