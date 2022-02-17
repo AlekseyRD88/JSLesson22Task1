@@ -51,5 +51,5 @@ removeHandlersBtnElem.addEventListener('click', removeHandlers);
 
 const clearHandlersElem = document.querySelector('.clear-btn');
 clearHandlersElem.addEventListener('click', function (event) {
-  event.preventDefault();
+  event.stopPropagation();
 });
