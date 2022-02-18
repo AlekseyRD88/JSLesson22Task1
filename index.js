@@ -49,10 +49,5 @@ const removeHandlers = () => {
 const removeHandlersBtnElem = document.querySelector('.remove-handlers-btn');
 removeHandlersBtnElem.addEventListener('click', removeHandlers);
 
-const clearHandlers = () => {
-  getEventListeners().click.forEach((e) => {
-    e.remove();
-  });
-};
 const clearHandlersElem = document.querySelector('.clear-btn');
-clearHandlersElem.addEventListener('click', clearHandlers);
+clearHandlersElem.replaceWith(clearHandlersElem.cloneNode(true));
