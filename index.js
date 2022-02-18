@@ -50,12 +50,14 @@ const removeHandlersBtnElem = document.querySelector('.remove-handlers-btn');
 removeHandlersBtnElem.addEventListener('click', removeHandlers);
 
 const clearHandlers = () => {
-  divElem.replaceWith(divElem.cloneNode(true));
-  divElem.replaceWith(divElem.cloneNode(true));
-  pElem.replaceWith(pElem.cloneNode(true));
-  pElem.replaceWith(pElem.cloneNode(true));
-  spanElem.replaceWith(spanElem.cloneNode(true));
-  spanElem.replaceWith(spanElem.cloneNode(true));
+  divElem.removeEventListener('click', logGreyDiv, true);
+  divElem.removeEventListener('click', logGreenDiv);
+
+  pElem.removeEventListener('click', logGreyP, true);
+  pElem.removeEventListener('click', logGreenP);
+
+  spanElem.removeEventListener('click', logGreySpan, true);
+  spanElem.removeEventListener('click', logGreenSpan);
 };
 
 const clearHandlersElem = document.querySelector('.clear-btn');
