@@ -62,3 +62,7 @@ const clearHandlers = () => {
 
 const clearHandlersElem = document.querySelector('.clear-btn');
 clearHandlersElem.addEventListener('click', clearHandlers);
+
+document.addEventListener('DOMContentLoaded', () => {
+  attachHandlers();
+});
